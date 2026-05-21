@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <TextView
+            style="@style/AppText.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="@string/panel_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/AppText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/general_average" />
+
+                <TextView
+                    android:id="@+id/gpaValueText"
+                    style="@style/AppText.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/AppText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/completed_ects" />
+
+                <TextView
+                    android:id="@+id/ectsValueText"
+                    style="@style/AppText.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/AppText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/attendance_rate" />
+
+                <TextView
+                    android:id="@+id/attendanceRateText"
+                    style="@style/AppText.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/AppText.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/courses_title" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:padding="8dp">
+
+            <TableLayout
+                android:id="@+id/courseTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <TableRow>
+                    <TextView
+                        style="@style/AppText.Bold"
+                        android:background="@drawable/bg_table_header"
+                        android:padding="12dp"
+                        android:text="@string/course_name" />
+
+                    <TextView
+                        style="@style/AppText.Bold"
+                        android:background="@drawable/bg_table_header"
+                        android:padding="12dp"
+                        android:text="@string/midterm_score" />
+
+                    <TextView
+                        style="@style/AppText.Bold"
+                        android:background="@drawable/bg_table_header"
+                        android:padding="12dp"
+                        android:text="@string/final_score" />
+
+                    <TextView
+                        style="@style/AppText.Bold"
+                        android:background="@drawable/bg_table_header"
+                        android:padding="12dp"
+                        android:text="@string/ects" />
+
+                    <TextView
+                        style="@style/AppText.Bold"
+                        android:background="@drawable/bg_table_header"
+                        android:padding="12dp"
+                        android:text="@string/absence" />
+
+                    <TextView
+                        style="@style/AppText.Bold"
+                        android:background="@drawable/bg_table_header"
+                        android:padding="12dp"
+                        android:text="@string/status" />
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</ScrollView>
